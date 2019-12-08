@@ -1,6 +1,9 @@
 # Science Hack 2019 Website
 
 See the official website at https://science-hack-2019.herokuapp.com/ .
+
+![](examples/ODIAC_2013_to_2014.gif)
+
 ### Technology Stack
 
 * **Frontend: [React (JS)](https://reactjs.org/)**
