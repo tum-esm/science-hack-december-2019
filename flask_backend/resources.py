@@ -1,6 +1,7 @@
 from flask_restful import Resource
 from flask import request
 
+from flask_backend import preprocessing
 from flask_backend import processing
 
 def get_params_dict(request):
@@ -71,7 +72,7 @@ class RESTDataset(Resource):
             return {"Status": "Wrong parameter: month has to be in range [1 ... 12]"}, 400
 
         return {"Status": "Ok",
-                "Datasets": processing.dataset_query_to_nc_url(dataset, year, month),
+                "Datasets": preprocessing.dataset_query_to_nc_url(dataset, year, month),
                 "params_dict": params_dict}, 200
 
 
@@ -136,6 +137,7 @@ class RESTDatasetCollection(Resource):
         if to_month < 1 or 12 < to_month:
             return {"Status": "Wrong parameter: to_month has to be in range [1 ... 12]"}, 400
 
-        return {"Status": "Ok",
-                "Datasets": processing.collection_query_to_nc_urls(dataset, from_year, to_year, from_month, to_month),
-                "params_dict": params_dict}, 200
+
+        times = preprocessing.get_times(from_year, to_year, from_month, to_month)
+        return processing.get_records(dataset, times)
+
