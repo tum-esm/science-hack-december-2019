@@ -1,5 +1,6 @@
 # Science Hack 2019 Website
 
+See the official website at https://science-hack-2019.herokuapp.com/ .
 ### Technology Stack
 
 * **Frontend: [React (JS)](https://reactjs.org/)**
