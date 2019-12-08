@@ -1,0 +1,45 @@
+{
+  "name": "react_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0",
+    "@deck.gl/aggregation-layers": "latest",
+    "@deck.gl/layers": "latest",
+    "@deck.gl/react": "^7.3.6",
+    "@material-ui/core": "^4.7.2",
+    "@material-ui/styles": "^4.7.1",
+    "clsx": "^1.0.4",
+    "deck.gl": "^7.3.6",
+    "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
+    "react-map-gl": "^5.1.3",
+    "react-socks": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
