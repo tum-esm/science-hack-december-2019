@@ -198,7 +198,7 @@ class MapPage extends React.Component {
 		return (
 			<div className="MapPage">
 				{this.getLegend()}
-				<Map dataset={this.prepareDataset()}/>
+				<Map dataset={this.prepareDataset()} selection={this.props.selection}/>
 			</div>
 		);
 	}

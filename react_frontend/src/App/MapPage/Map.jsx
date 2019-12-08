@@ -1,7 +1,6 @@
 /// app.js
 import React from 'react';
 import DeckGL from '@deck.gl/react';
-import {LineLayer} from '@deck.gl/layers';
 import {StaticMap} from 'react-map-gl';
 import {HexagonLayer} from '@deck.gl/aggregation-layers';
 
@@ -17,8 +16,6 @@ const initialViewState = {
 	bearing: 0
 };
 
-// Data to be used by the LineLayer
-const data = [{sourcePosition: [-122.41669, 37.7853], targetPosition: [-122.41669, 37.781]}];
 
 export class Map extends React.Component {
 	render() {
@@ -50,7 +47,16 @@ export class Map extends React.Component {
 			colorAggregation: "MEAN",
 
 			elevationScale: 3000,
-			getPosition: d => [d.coordinates[1], d.coordinates[0]],
+			getPosition: d => {
+				if (this.props.selection.dataset === 0) {
+					let lng = d.coordinates[1] + 180;
+					if (lng > 180) {
+						lng -= 360;
+					}
+					return [lng, d.coordinates[0]];
+				} else {
+					return [d.coordinates[1], d.coordinates[0]];
+				}},
 			elevationAggregation: "MEAN",
 			getElevationWeight: d => d.value,
 		});
