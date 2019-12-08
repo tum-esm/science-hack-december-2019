@@ -89,6 +89,12 @@ class RESTDatasetCollection(Resource):
         if dataset not in ["odiac", "edgar"]:
             return {"Status": "Wrong parameter: dataset has to be either \"odiac\" or \"edgar\""}, 400
 
+        if dataset == "odiac":
+            bottom_limit = 2000
+            top_limit = 2017
+        else:
+            bottom_limit = 1970
+            top_limit = 2018
         # Evaluating parameter "from_year"
 
         if "from_year" not in params_dict:
@@ -98,7 +104,7 @@ class RESTDatasetCollection(Resource):
                 return {"Status": "Wrong parameter: from_year has to be an integer"}, 400
             else:
                 from_year = int(params_dict["from_year"])
-        if from_year < 2000 or 2018 < from_year:
+        if from_year < bottom_limit or top_limit < from_year:
             return {"Status": "Wrong parameter: from_year has to be in range [2000 ... 2018]"}, 400
 
         # Evaluating parameter "to_year"
@@ -110,7 +116,7 @@ class RESTDatasetCollection(Resource):
                 return {"Status": "Wrong parameter: to_year has to be an integer"}, 400
             else:
                 to_year = int(params_dict["to_year"])
-        if to_year < 2000 or 2018 < to_year:
+        if to_year < bottom_limit or top_limit < to_year:
             return {"Status": "Wrong parameter: to_year has to be in range [2000 ... 2018]"}, 400
 
         # Evaluating parameter "from_month"
