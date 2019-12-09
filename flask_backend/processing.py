@@ -13,17 +13,17 @@ if not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverif
     ssl._create_default_https_context = ssl._create_unverified_context
 
 
-def _scale(mx, factor):
-    """scales matrix mx by factor"""
-    a, b = mx.shape
+def _scale(m, factor):
+    """scales numpy matrix m by factor"""
+    a, b = m.shape
     if a % factor != 0 or b % factor != 0:
         print('Invalid scaling factor!')
         exit(1)
-    mx_sc = np.zeros([a//factor, b//factor], dtype=np.float64)
+    mscld = np.zeros([a//factor, b//factor], dtype=np.float64)
     for new_lat_index in range(a//factor):
         for new_lon_index in range(b//factor):
-            mx_sc[new_lat_index][new_lon_index] = np.average([row[new_lon_index*factor:(new_lon_index+1)*factor] for row in mx[new_lat_index*factor:(new_lat_index+1)*factor]])
-    return mx_sc
+            mscld[new_lat_index][new_lon_index] = np.average([row[new_lon_index*factor:(new_lon_index+1)*factor] for row in m[new_lat_index*factor:(new_lat_index+1)*factor]])
+    return mscld
 
 def _transform_ODIAC(dataset, months, scale=1):
     """Transform ODIAC netCDF files to json"""
@@ -97,10 +97,6 @@ def get_json_from_url(org, url, months=None, scale=1):
     ds = nc.Dataset(bufferpath, "r", format="NETCDF4")
     records, maximum = _transform_EDGAR(ds, scale) if org=='edgar' else _transform_ODIAC(ds, months, scale)
 
-    #print("Dumping to json")
-    #with open('out.json', 'w') as outfile:
-    #    json.dump(r, outfile)
-
     print('Close and remove netCDF file')
     ds.close()
     os.remove(bufferpath)
@@ -160,8 +156,7 @@ def get_records(org, ym, scale=1):
 
 
 if __name__ == "__main__":
-    # HOW TO USE
-    start = time.time()
+    # for testing
     records = get_records(
         'odiac',
         {
@@ -170,9 +165,4 @@ if __name__ == "__main__":
         },
         3
     )
-    print(time.time() - start)
-
-
-#? color coding
-#? scale function for 3 deg
 
