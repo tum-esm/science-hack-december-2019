@@ -1,3 +1,10 @@
+## Competitors
+- Datawrapper: https://www.datawrapper.de/
+- Flourish: https://flourish.studio/
+
+## Possible Cool Tools
+- Mapbox: https://www.mapbox.com/
+
 ## Minimal Viable Product
 
 4 Screens:
