@@ -9,14 +9,31 @@ from pymongo import MongoClient
 # PyMongo version
 #print(pymongo.version)
 
+uri = 'mongodb://AdminUser:<password>@testcluster-shard-00-00-hatcp.gcp.mongodb.net:27017,testcluster-shard-00-01-hatcp.gcp.mongodb.net:27017,testcluster-shard-00-02-hatcp.gcp.mongodb.net:27017/test?ssl=true&replicaSet=TestCluster-shard-0&authSource=admin&retryWrites=true&w=majority'
+
 # establish client to connect to cluster
-client = MongoClient('mongodb://AdminUser:<password>@testcluster-shard-00-00-hatcp.gcp.mongodb.net:27017,testcluster-shard-00-01-hatcp.gcp.mongodb.net:27017,testcluster-shard-00-02-hatcp.gcp.mongodb.net:27017/test?ssl=true&replicaSet=TestCluster-shard-0&authSource=admin&retryWrites=true&w=majority')
+client = MongoClient(uri)
 
-# create a new database on cluster called testDatabase
-db = client.testDatabase
+# get stats about connection
+#print(client.stats)
 
-# create new collection in database called people
-people = db.people
+# get list of databases that we have access to
+#print(client.list_database_names())
+
+# get/create a new database on cluster
+#db = client.sample_geospatial
+db = client['sample_geospatial']
+
+# get list of collections in database
+#print(db.list_collection_names())
+
+# get/create new collection in database
+#cn = db.shipwrecks
+cn = db['shipwrecks']
+
+# count documents in collection
+print(cn.count_documents({}))
+exit()
 
 # specify new document to insert into collection
 personDocument = {
