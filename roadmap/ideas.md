@@ -6,13 +6,18 @@
   - **binned continuous** data could either 
     - be simply integrated in the discrete option (bins are thus decided by the user with more effort)
     - or done by us with the choice of different binning algorithms (constant size, quantiles method, Fisher-Jenks, ...)
+  - support for **bivariate scales**? (see https://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html for an example)
 - different options of plots
-  - our existing 3D hexagon plot
-  - non-3D version of hexagon plot (3D plots have the caveat that big bars tend to _hide_ smaller ones, thus skewing the visualization)
   - simply plotting every data point
+  - flat (non-3D) version of hexagon plot (3D plots have the caveat that big bars tend to _hide_ smaller ones, thus skewing the visualization)
   - heatmap / contour map
   - choropleth map
-  - cartogram
-- ability for users to comment on maps
+  - plotting lines (example: http://hint.fm/wind/)
+  - locator maps (see examples at Datawrapper website: https://www.datawrapper.de/maps/)
+  - (cartogram)
+- does mapbox support different map projections?
+  - list of projections: https://en.wikipedia.org/wiki/List_of_map_projections
+- ideas for example showcase data
+  - "Good Morning" Tweets: http://blog.blprnt.com/blog/blprnt/goodmorning
 - ability for users to easily share public/private maps via a link or QR code
 
