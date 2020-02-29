@@ -1,7 +1,3 @@
-## Competitors
-- Datawrapper: https://www.datawrapper.de/
-- Flourish: https://flourish.studio/
-
 ## Possible Cool Tools
 - Mapbox: https://www.mapbox.com/
 

@@ -1,5 +1,4 @@
 ### Ideas
-- monetize uploading public/private datasets
 - color scales
   - for **continuous** data the default should probably be some viridis color scale, but other options (diverging, bright to dark, dark to bright, custom) should be available
   - for **discrete** data there has to be the option to select that the data is discrete and a default and custom option to color them available
