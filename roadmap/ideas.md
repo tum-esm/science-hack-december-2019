@@ -1,9 +1,12 @@
 ### Ideas
 - color scales
-  - for **continuous** data the default should probably be some viridis color scale, but other options (diverging, bright to dark, dark to bright, custom) should be available
+  - for **continuous** data
+    - default should a viridis color scale
+    - Turbo rainbow color map: https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html
+    - support for custom colormap (simple non-perceptually continuous between two colors)
   - for **discrete** data there has to be the option to select that the data is discrete and a default and custom option to color them available
   - **binned continuous** data could either 
-    - be simply integrated in the discrete option (bins are thus decided by the user with more effort)
+    - be simply integrated in the discrete option (with bins decided by the user)
     - or done by us with the choice of different binning algorithms (constant size, quantiles method, Fisher-Jenks, ...)
   - support for **bivariate scales**? (see https://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html for an example)
 - different options of plots
