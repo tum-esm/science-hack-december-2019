@@ -21,5 +21,8 @@
   - list of projections: https://en.wikipedia.org/wiki/List_of_map_projections
 - ideas for example showcase data
   - "Good Morning" Tweets: http://blog.blprnt.com/blog/blprnt/goodmorning
+  - New York City Taxi Trips: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+  - Light Pollution Map: https://www.lightpollutionmap.info
+  - Population count 1x1km: https://public.opendatasoft.com/explore/dataset/uk-population-2011-1-x-1-km-grid0/table/
 - ability for users to easily share public/private maps via a link or QR code
 
