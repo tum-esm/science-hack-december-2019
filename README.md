@@ -1,10 +1,19 @@
 # Science Hack 2019 Website
 
-See the official website at **https://science-hack-2019.herokuapp.com/**.
-
 ![](examples/selecting_process.gif)
 
 ![](examples/ODIAC_2013_to_2014.gif)
+
+### Remarks
+
+See the official website at **https://science-hack-2019.herokuapp.com/** (container in sleep mode, startup might take a while ~ 20s).
+
+Be patient with the data fetching -> no preprocessing done (using the exact edgar/odiac nc files).
+
+Select a date range and press `a`/`d` to jump backwards/forwards one time step.<br/>
+Press `space` to run the "player" = Loop through the timesteps.
+
+<br/>
 
 ### Tech Stack
 
