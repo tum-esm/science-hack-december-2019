@@ -23,19 +23,18 @@ Press `space` to run the "player" = Loop through the timesteps.
 
 <br/>
 
-* Using the **[Heroku](https://www.heroku.com/)** Pipline
+* Using the **[Heroku](https://www.heroku.com/)** deployment pipeline
 * Hosted on **[AWS](https://aws.amazon.com/de/)**
 
 <br/>
 
-* Map & Data Rendering using [**DeckGL**](https://deck.gl/)
-* File Storage with **[Google Cloud Storage](https://cloud.google.com/products/storage)**
+* Map & data rendering using [**DeckGL**](https://deck.gl/)
+* File storage with **[Google Cloud Storage](https://cloud.google.com/products/storage)**
 
 <br/>
 
-* Design Guideline by **[Google Material](https://material.io/)**
-* React Design Components by **[Material UI](https://material-ui.com/)**
-* With the help of **[SCSS](https://sass-lang.com/)**
+* Design guideline by **[Google Material](https://material.io/)**
+* React design components by **[Material UI](https://material-ui.com/)**
 
 ### Planned Tech Stack
 
