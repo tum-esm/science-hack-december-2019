@@ -9,7 +9,7 @@
 See the official website at **https://science-hack-2019.herokuapp.com/** (container in sleep mode, startup might take a while ~ 20s).
 
 Be patient with the data fetching -> no preprocessing done (using the exact edgar/odiac nc files). <br/>
-Since there is no preprocessing, for large queries the memory of the current (cost free) server is not enough.
+Since there is no preprocessing, the memory of the current (cost free) server is not big enough for large queries.
 
 Select a date range and press `a`/`d` to jump backwards/forwards one time step.<br/>
 Press `space` to run the "player" = Loop through the timesteps.
