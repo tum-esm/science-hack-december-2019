@@ -4,7 +4,7 @@
 
 ![](examples/ODIAC_2013_to_2014.gif)
 
-### Remarks
+### Usage/Remarks
 
 See the official website at **https://science-hack-2019.herokuapp.com/** (container in sleep mode, startup might take a while ~ 20s).
 
